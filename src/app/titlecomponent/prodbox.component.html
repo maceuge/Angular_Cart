@@ -1,0 +1,13 @@
+<div class="col-sm-6 col-md-2">
+  <div class="thumbnail">
+    <img src="{{product.image}}" alt="...">
+    <div class="caption">
+      <h3>{{product.name}}</h3>
+      <h5>{{product.type}}</h5>
+      <h5>ID: {{product.id}}</h5>
+      <h5>Puntos: {{product.star}}</h5>
+      <h5>{{product.price | currency: 'USD' : true : '1.2-2'}}</h5>
+      <p><button (click)="add(product)"  class="btn btn-primary btn-block">Add To Cart</button></p>
+    </div>
+  </div>
+</div>
