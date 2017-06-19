@@ -24,6 +24,7 @@ export class CartService {
     if (!this.products[product.id]) {
         this.products[product.id] = {
           quantity: 1,
+          id: product.id,
           name: product.name,
           price: product.price
         }

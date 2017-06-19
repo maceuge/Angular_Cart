@@ -11,15 +11,20 @@ export class ApiService {
   constructor(private http : Http) {}
 
   getProducts () {
-     let url = '/data/data.json';
-     return console.log(url)
-       // .toPromise()
-       // .then(response => response.json())
-       // .catch(this.error);
+     let url = '/assets/data/data.json';
+     return this.http.get(url)
+       .toPromise()
+       .then(response => response.json())
+       .catch(this.error);
   }
 
-  // error(error : any) {
-  //     return Promise.reject(error.message || error);
-  // }
+  getProduct (id: number) {
+    return this.getProducts()
+      .then(products => products.find(product => product.id == id));
+  }
+
+  error(error : any) {
+      return Promise.reject(error.message || error);
+  }
 
 }
