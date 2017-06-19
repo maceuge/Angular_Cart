@@ -1,8 +1,9 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {HttpModule} from '@angular/http';
-import {RouterModule} from '@angular/router';
 import {FormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
+
 
 import {HomeComponent} from './components/home/home.component';
 import {ProductComponent} from './components/product/product.component';
@@ -45,8 +46,8 @@ const routes = [
   imports: [
     BrowserModule,
     HttpModule,
+    FormsModule,
     RouterModule.forRoot(routes),
-    FormsModule
   ],
   bootstrap: [
     HomeComponent

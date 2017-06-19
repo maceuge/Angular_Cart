@@ -48,7 +48,7 @@ export class AuthService {
     this.router.navigate(link);
   }
 
-  chekSession () {
+  checkSession () {
     if (localStorage.getItem("user") == null) {
        this.session = false;
        this.redirect();

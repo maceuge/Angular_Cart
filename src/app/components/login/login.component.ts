@@ -16,6 +16,10 @@ export class AuthComponent {
     this.user = {email: null, password: null}
   }
 
+  sessionStatus () {
+    return this.auth.getSession();
+  }
+
   login () {
     if (!this.auth.login(this.user)) {
       this.error = "La Contraseña es incorrecta";

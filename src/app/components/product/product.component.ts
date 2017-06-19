@@ -29,7 +29,7 @@ export class ProductComponent implements OnInit{
   }
 
   ngOnInit () {
-    this.auth.chekSession();
+    this.auth.checkSession();
     this.getProducts();
   }
 

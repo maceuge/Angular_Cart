@@ -10,9 +10,13 @@ import {AuthService} from '../../services/auth.services';
 export class HomeComponent implements OnInit{
   title: string = "Univer-MAG";
 
-  constructor (protected auth: AuthService) {}
+  constructor (private auth: AuthService) {}
 
   ngOnInit () {}
+
+  sessionStatus () {
+    return this.auth.getSession();
+  }
 
   logout () {
     this.auth.logout();
