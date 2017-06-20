@@ -12,6 +12,7 @@ import {CartComponent} from './components/cart/cart.component';
 import {WelcomeComponent} from './components/welcome/welcome.component';
 import {DetailComponent} from './components/detail_product/detail.component';
 import {AuthComponent} from './components/login/login.component';
+import {CartBarComponent} from './components/cartbar/cartbar.component';
 
 
 const routes = [
@@ -41,7 +42,8 @@ const routes = [
     CartComponent,
     WelcomeComponent,
     DetailComponent,
-    AuthComponent
+    AuthComponent,
+    CartBarComponent,
   ],
   imports: [
     BrowserModule,

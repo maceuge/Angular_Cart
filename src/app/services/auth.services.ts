@@ -1,18 +1,16 @@
 import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
+import {User} from '../common/user';
 
-
-export interface User {
-  email: string,
-  password: string
-}
 
 const USERS = [
   {
+    name: "Eugenio",
     email: "admin@univer.com",
     password: "123456"
   },
   {
+    name: "Yamila",
     email: "user@univer.com",
     password: "123456"
   }
@@ -21,8 +19,8 @@ const USERS = [
 @Injectable()
 
 export class AuthService {
-  users: User [] = USERS;
-  session: boolean = false;
+   users: User [] = USERS;
+   // session: boolean = false;
 
   constructor (private router: Router) {}
 
@@ -31,14 +29,14 @@ export class AuthService {
 
     if (user_exist && user_exist.password == user.password) {
         localStorage.setItem("user", JSON.stringify(user_exist));
-        this.session = true;
+        // this.session = true;
         let link = ['/'];
         this.router.navigate(link);
     }
   }
 
   logout () {
-    this.session = false;
+    // this.session = false;
     localStorage.removeItem("user");
     this.redirect();
   }
@@ -50,16 +48,21 @@ export class AuthService {
 
   checkSession () {
     if (localStorage.getItem("user") == null) {
-       this.session = false;
+       // this.session = false;
        this.redirect();
     } else {
-       this.session = true;
+       // this.session = true;
     }
   }
 
-  getSession () {
-    return this.session;
+  check () {
+    if (localStorage.getItem("user") == null) {
+      return false;
+    } else {
+      return true;
+    }
   }
+
 
   getUser () {
     return localStorage.getItem("user");

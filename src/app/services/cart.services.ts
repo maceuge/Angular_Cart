@@ -28,13 +28,24 @@ export class CartService {
           name: product.name,
           price: product.price
         }
+        this.addToLocalStorage(product);
+
     } else {
         this.products[product.id].quantity += 1;
+        this.updateLocalStorage(product);
     }
 
     this.detail.total += product.price;
     this.detail.items += 1;
+  }
 
+  addToLocalStorage (product) {
+    localStorage.setItem("item_"+product.id, JSON.stringify(this.products[product.id]));
+  }
+
+  updateLocalStorage (product) {
+    localStorage.removeItem("item_"+product.id);
+    localStorage.setItem("item_"+product.id, JSON.stringify(this.products[product.id]));
   }
 
 

@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
-import {AuthService, User} from '../../services/auth.services';
+import {User} from '../../common/user';
+import {AuthService} from '../../services/auth.services';
 
 @Component({
   selector: 'login-form',
@@ -13,11 +14,7 @@ export class AuthComponent {
   error: string;
 
   constructor (private auth: AuthService) {
-    this.user = {email: null, password: null}
-  }
-
-  sessionStatus () {
-    return this.auth.getSession();
+    this.user = {name: null, email: null, password: null}
   }
 
   login () {
