@@ -5,7 +5,7 @@
         <h2>Carrito</h2>
         <h4>Articulos: {{details.items}}</h4>
         <h5>Total: {{details.total | currency: 'USD' : true : '1.2-2' }}</h5>
-        <p><button class="btn btn-success btn-block" (click)="checkOut()">Checkout</button></p>
+        <p><button class="btn btn-success btn-block">Checkout</button></p>
       </div>
     </div>
   </div>
@@ -22,23 +22,15 @@
         </tr>
       </thead>
       <tbody>
-        <!--<tr *ngFor="let key of keys()">-->
-          <!--<td>{{products[key].id}}</td>-->
-          <!--<td>{{products[key].name}}</td>-->
-          <!--<td>{{products[key].price}}</td>-->
-          <!--<td>{{products[key].quantity}}</td>-->
-          <!--<td>{{ (products[key].price * products[key].quantity) }}</td>-->
-        <!--</tr>-->
-        <tr *ngIf="products">
-          <td>{{products.id}}</td>
-          <td>{{products.name}}</td>
-          <td>{{products.price}}</td>
-          <td>{{products.quantity}}</td>
-          <!--<td>{{ (products[key].price * products[key].quantity) }}</td>-->
+        <tr *ngFor="let key of keys()">
+          <td>{{products[key].id}}</td>
+          <td>{{products[key].name}}</td>
+          <td>{{products[key].price}}</td>
+          <td>{{products[key].quantity}}</td>
+          <td>{{(products[key].price * products[key].quantity)}}</td>
         </tr>
       </tbody>
     </table>
-
   </div>
 </div>
 

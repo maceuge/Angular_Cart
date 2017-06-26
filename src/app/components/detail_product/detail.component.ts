@@ -4,6 +4,7 @@ import {Location} from '@angular/common';
 import {Product} from '../../common/product';
 import {ApiService} from '../../services/api.services';
 import {CartService} from '../../services/cart.services';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'detail',
@@ -19,7 +20,8 @@ export class DetailComponent implements OnInit{
     private route : ActivatedRoute,
     private locate : Location,
     private apiservice : ApiService,
-    private cartService: CartService
+    private cartService: CartService,
+    private router: Router,
   ) {
 
   }
@@ -29,13 +31,16 @@ export class DetailComponent implements OnInit{
   }
 
   ngOnInit () {
-
     this.route.params.forEach( (params: Params) => {
         let id = +params["id"];
         this.apiservice.getProduct(id)
           .then(product => this.product = product);
     })
+  }
 
+  goToCart () {
+    let link = ['/products'];
+    this.router.navigate(link);
   }
 
 }

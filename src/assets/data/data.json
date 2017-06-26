@@ -5,7 +5,7 @@
     "type" : "Desarollo Web",
     "star" : 5,
     "price" : 2000,
-    "image" : "http://via.placeholder.com/250x250"
+    "image" : "http://via.placeholder.com/155x100"
   },
   {
     "id" : 2,
@@ -13,7 +13,7 @@
     "type" : "Desarollo Web",
     "star" : 9,
     "price" : 5000,
-    "image" : "http://via.placeholder.com/250x250"
+    "image" : "http://via.placeholder.com/155x100"
   },
   {
     "id" : 3,
@@ -21,7 +21,7 @@
     "type" : "Desarollo Web",
     "star" : 7,
     "price" : 8999,
-    "image" : "http://via.placeholder.com/250x250"
+    "image" : "http://via.placeholder.com/155x100"
   },
   {
     "id" : 4,
@@ -29,7 +29,7 @@
     "type" : "Back-End",
     "star" : 10,
     "price" : 4300,
-    "image" : "http://via.placeholder.com/250x250"
+    "image" : "http://via.placeholder.com/155x100"
   },
   {
     "id" : 5,
@@ -37,7 +37,7 @@
     "type" : "Desarollo Web",
     "star" : 2,
     "price" : 7500,
-    "image" : "http://via.placeholder.com/250x250"
+    "image" : "http://via.placeholder.com/155x100"
   },
   {
     "id" : 6,
@@ -45,7 +45,7 @@
     "type" : "Desarollo Web",
     "star" : 5,
     "price" : 3400,
-    "image" : "http://via.placeholder.com/250x250"
+    "image" : "http://via.placeholder.com/155x100"
   }
 
 ]

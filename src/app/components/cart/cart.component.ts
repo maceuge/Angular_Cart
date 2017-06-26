@@ -14,19 +14,7 @@ export class CartComponent implements OnInit {
   constructor(private CartService: CartService) {}
 
   ngOnInit () {
-    // this.products = this.CartService.getProducts();
-    this.products = JSON.parse(localStorage.getItem("item_2"));
-
-    // this.products = {
-    //
-    //   for (let item in localStorage) {
-    //
-    //   }
-    //   Storage.prototype.getObject = function(key) {
-    //   return JSON.parse(this.getItem(key));
-    //   }
-    // }
-
+    this.products = this.CartService.getProducts();
     this.details = this.CartService.getDetail();
   }
 
@@ -34,14 +22,22 @@ export class CartComponent implements OnInit {
     return Object.keys(this.products);
   }
 
-  checkOut () {
-    let i: number = 1
-    do {
-      localStorage.removeItem("item_"+i);
-      i += 1;
-    } while (localStorage.length > 1)
+  // getDataInLocalStorage () {
+  //   for (var i = 1; i <= localStorage.length; i++) {
+  //     let data = JSON.parse(localStorage.getItem("item_"+i));
+  //      if (data !== null) {
+  //        this.products.push(data);
+  //      }
+  //   }
+  // }
 
-  }
+  // checkOut () {
+  //   let i: number = 1
+  //   do {
+  //     localStorage.removeItem("item_"+i);
+  //     i += 1;
+  //   } while (localStorage.length > 1)
+  // }
 
 
 }

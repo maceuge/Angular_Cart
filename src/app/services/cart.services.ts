@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Product} from '../common/product';
+import {HomeComponent} from '../components/home/home.component';
 
 @Injectable()
 
@@ -7,7 +8,9 @@ export class CartService {
   private products: any;
   private detail: any;
 
-  constructor() {
+  constructor(
+    private home: HomeComponent,
+  ) {
     this.products = {}
     this.detail = {total: 0, items: 0}
   }
@@ -22,31 +25,31 @@ export class CartService {
 
   addToCart (product: Product) {
     if (!this.products[product.id]) {
-        this.products[product.id] = {
-          quantity: 1,
-          id: product.id,
-          name: product.name,
-          price: product.price
-        }
-        this.addToLocalStorage(product);
-
+          this.products[product.id] = {
+            quantity: 1,
+            id: product.id,
+            name: product.name,
+            price: product.price
+          }
+        // this.addToLocalStorage(product);
     } else {
         this.products[product.id].quantity += 1;
-        this.updateLocalStorage(product);
+        // this.updateLocalStorage(product);
     }
 
     this.detail.total += product.price;
     this.detail.items += 1;
+    this.home.setCartItems(this.detail.items);
   }
 
-  addToLocalStorage (product) {
-    localStorage.setItem("item_"+product.id, JSON.stringify(this.products[product.id]));
-  }
-
-  updateLocalStorage (product) {
-    localStorage.removeItem("item_"+product.id);
-    localStorage.setItem("item_"+product.id, JSON.stringify(this.products[product.id]));
-  }
+  // addToLocalStorage (product) {
+  //   localStorage.setItem("item_"+product.id, JSON.stringify(this.products[product.id]));
+  // }
+  //
+  // updateLocalStorage (product) {
+  //   localStorage.removeItem("item_"+product.id);
+  //   localStorage.setItem("item_"+product.id, JSON.stringify(this.products[product.id]));
+  // }
 
 
 }

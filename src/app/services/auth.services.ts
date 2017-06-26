@@ -20,7 +20,6 @@ const USERS = [
 
 export class AuthService {
    users: User [] = USERS;
-   // session: boolean = false;
 
   constructor (private router: Router) {}
 
@@ -29,14 +28,12 @@ export class AuthService {
 
     if (user_exist && user_exist.password == user.password) {
         localStorage.setItem("user", JSON.stringify(user_exist));
-        // this.session = true;
         let link = ['/'];
         this.router.navigate(link);
     }
   }
 
   logout () {
-    // this.session = false;
     localStorage.removeItem("user");
     this.redirect();
   }
@@ -48,10 +45,7 @@ export class AuthService {
 
   checkSession () {
     if (localStorage.getItem("user") == null) {
-       // this.session = false;
        this.redirect();
-    } else {
-       // this.session = true;
     }
   }
 
@@ -62,7 +56,6 @@ export class AuthService {
       return true;
     }
   }
-
 
   getUser () {
     return localStorage.getItem("user");

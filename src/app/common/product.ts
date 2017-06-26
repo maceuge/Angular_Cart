@@ -4,5 +4,6 @@ export interface Product {
   type : string,
   star : number,
   price : number,
-  image : string
+  image : string,
+  state ?: string,
 }

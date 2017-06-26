@@ -28,19 +28,23 @@
           </h4>
         </li>
         <li *ngIf="sessionStatus()">
-          <!--<cart-bar></cart-bar>-->
-          <!--<cart></cart>-->
+          <button class="btn btn-info navbar-btn" style="margin-right: 8px;">
+            <i class="fa fa-shopping-cart fa-lg"></i>
+            <span class="badge">{{cartItems}}</span>
+          </button>
         </li>
         <li *ngIf="!sessionStatus()">
           <button class="btn btn-info navbar-btn" routerLink="login">Ingreso</button>
         </li>
+        <li *ngIf="!sessionStatus()">
+          <a href="" routerLink="register">Registro</a>
+        </li>
         <li *ngIf="sessionStatus()">
           <button class="btn btn-danger navbar-btn" (click)="logout()">Salir</button>
         </li>
-        <li><a href="">Registro</a></li>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </nav>
 
 <router-outlet></router-outlet>
