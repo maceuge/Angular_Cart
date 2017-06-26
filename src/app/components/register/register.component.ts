@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {User} from '../../common/user';
 import {RegisterService} from '../../services/register.services';
+// import {FirebaseListObservable} from 'angularfire2/database';
 
 @Component({
   selector: 'register',
@@ -25,9 +26,10 @@ export class RegisterComponent {
     if (this.user.name !== null) {
         if (this.user.email !== null) {
             if (this.user.password !== null) {
-              console.log(this.user.name);
-              console.log(this.user.email);
-              console.log(this.user.password);
+              this.registService.registerUserToDatabase(this.user);
+
+              let users = this.registService.getUsers();
+
               this.error = "";
             } else {
               this.error = "El Campo Contraseña no puede estar Vacio!"
