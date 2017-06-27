@@ -10,34 +10,34 @@ import {RegisterService} from '../../services/register.services';
 
 export class UserListComponent implements OnInit{
 
-  private users: any [];
+  users = [];
 
   constructor (
     private authServ: AuthService,
     private registerServ: RegisterService
   ) {}
 
-  getUserObject(){
-    let usersList = this.registerServ.getUsers();
-
-      usersList.forEach(function (value) {
-        // this.users = value;
-        // for (var key in value) {
-        //   this.users[key].push(value);
-        //   // console.log("Valor: " + value[key] + " y la llave: " + key);
-        // }
-        console.log(value);
-      });
-  }
 
   keys() {
-    return Object.keys(this.registerServ.getUsers());
+    return Object.keys(this.users);
   }
+
+  getUsersList () {
+    let usersList = this.registerServ.getUsers();
+
+    usersList
+      .subscribe(snapshots=>{
+        snapshots.forEach(snapshot => {
+          // console.log(snapshot.key, snapshot.val().name);
+          this.users.push(snapshot.val());
+        });
+      })
+  }
+
 
   ngOnInit () {
     this.authServ.checkSession();
-    this.getUserObject();
-    // console.log(this.keys());
+    this.getUsersList();
   }
 
 }

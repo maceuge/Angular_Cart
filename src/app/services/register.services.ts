@@ -14,7 +14,7 @@ export class RegisterService {
   }
 
   getUsers () {
-    return this.fireListObserv;
+    return this.angFireBase.list('/users', {preserveSnapshot: true});
   }
 
   registerUserToDatabase (user: User) {
