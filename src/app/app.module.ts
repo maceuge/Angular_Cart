@@ -19,6 +19,7 @@ import {DetailComponent} from './components/detail_product/detail.component';
 import {AuthComponent} from './components/login/login.component';
 import {CartBarComponent} from './components/cartbar/cartbar.component';
 import {RegisterComponent} from './components/register/register.component';
+import {UserListComponent} from './components/users_list/user.component';
 
 
 const routes = [
@@ -41,6 +42,10 @@ const routes = [
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path: 'userlist',
+    component: UserListComponent,
   }
 ]
 
@@ -55,6 +60,7 @@ const routes = [
     AuthComponent,
     CartBarComponent,
     RegisterComponent,
+    UserListComponent,
   ],
   imports: [
     BrowserModule,

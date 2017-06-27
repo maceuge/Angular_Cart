@@ -7,7 +7,6 @@ import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database
 
 export class RegisterService {
 
-  // private user: User;
   fireListObserv: FirebaseListObservable<any[]>;
 
   constructor (private angFireBase: AngularFireDatabase) {
