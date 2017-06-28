@@ -11,12 +11,12 @@
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" *ngIf="sessionStatus()">
         <li><a routerLink="">Inicio</a></li>
         <li><a routerLink="products">Productos</a></li>
         <li><a routerLink="userlist">Usuarios</a></li>
       </ul>
-      <form class="navbar-form navbar-left">
+      <form class="navbar-form navbar-left" *ngIf="sessionStatus()">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Buscar...">
         </div>

@@ -3,6 +3,11 @@ import {BrowserModule} from '@angular/platform-browser';
 import {HttpModule} from '@angular/http';
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
+
+// Material Modules
+import {MdButtonModule} from '@angular/material';
+import {MdInputModule} from '@angular/material';
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {environment} from '../environments/environment';
 import {AngularFireModule} from 'angularfire2';
@@ -67,6 +72,8 @@ const routes = [
     HttpModule,
     FormsModule,
     RouterModule.forRoot(routes),
+    MdButtonModule,
+    MdInputModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,

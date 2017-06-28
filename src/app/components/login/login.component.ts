@@ -5,6 +5,7 @@ import {AuthService} from '../../services/auth.services';
 @Component({
   selector: 'login-form',
   templateUrl: './login.component.html',
+  styleUrls: ['./button-style.css'],
   providers: [AuthService]
 })
 
