@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  /*background-color: #f4f4f7;*/
+  background-color: #f7f7fa;
+  font-family: 'Raleway', sans-serif;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #f7f7fa inset;
+}
+
+.fix-padding-container {
+  padding-top: 30px;
+}

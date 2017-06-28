@@ -1,0 +1,30 @@
+.example-icon {
+  padding: 0 1px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar {
+  /*background: #afafaf;*/
+  background: #3f51b5;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.regboton {
+  color: rgba(0,0,0,0.87);
+}
+
+.nav-user {
+  color: rgba(255,255,255,0.89);
+  padding-right: 22px;
+  padding-top: 12px;
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.nav-user-icon {
+  padding-top: 7px;
+  /*padding-left: 20px;*/
+}

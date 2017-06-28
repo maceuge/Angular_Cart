@@ -8,18 +8,19 @@
         <!--<div class="alert alert-danger" *ngIf="error">-->
           <!--{{error}}-->
         <!--</div>-->
+          <p class="text-danger font-error text-center" *ngIf="error">{{error}}</p>
+
           <md-input-container class="full-width">
             <input type="text" mdInput [(ngModel)]="user.email" name="email" placeholder="Email">
           </md-input-container>
 
           <md-input-container class="full-width">
-            <input type="password" mdInput [(ngModel)]="user.password" name="password" placeholder="Password">
+            <input type="password" mdInput [(ngModel)]="user.password" name="password" placeholder="Contraseña">
             <!--<md-error>{{error}}</md-error>-->
           </md-input-container>
-          <p class="text-danger font-error" *ngIf="error">{{error}}</p>
 
         <div class="button-row">
-          <button md-raised-button>LOGIN</button>
+          <button md-raised-button>INGRESAR</button>
         </div>
       </form>
 

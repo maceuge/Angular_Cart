@@ -7,6 +7,10 @@ import {RouterModule} from '@angular/router';
 // Material Modules
 import {MdButtonModule} from '@angular/material';
 import {MdInputModule} from '@angular/material';
+import {MdToolbarModule} from '@angular/material';
+import {MdIconModule} from '@angular/material';
+import {MdGridListModule} from '@angular/material';
+import {MdCardModule} from '@angular/material';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {environment} from '../environments/environment';
@@ -74,6 +78,10 @@ const routes = [
     RouterModule.forRoot(routes),
     MdButtonModule,
     MdInputModule,
+    MdToolbarModule,
+    MdIconModule,
+    MdGridListModule,
+    MdCardModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,

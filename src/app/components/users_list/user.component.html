@@ -1,5 +1,40 @@
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-6 col-md-offset-3 fix-padding-container">
+
+
+    <!--<md-grid-list cols="12" rowHeight="35px">-->
+
+      <!--<md-grid-tile [colspan]="3" [rowspan]="1" [style.background]="lightblue">-->
+        <!--Nombre-->
+      <!--</md-grid-tile>-->
+      <!--<md-grid-tile [colspan]="3" [rowspan]="1" [style.background]="lightblue">-->
+        <!--Mail-->
+      <!--</md-grid-tile>-->
+      <!--<md-grid-tile [colspan]="3" [rowspan]="1" [style.background]="lightblue">-->
+        <!--Contraseña-->
+      <!--</md-grid-tile>-->
+      <!--<md-grid-tile [colspan]="3" [rowspan]="1" [style.background]="lightblue">-->
+        <!--Accion-->
+      <!--</md-grid-tile>-->
+
+      <!--<div *ngFor="let key of keys()">-->
+        <!--<md-grid-tile [colspan]="3" [rowspan]="1" [style.background]="lightblue">-->
+          <!--{{users[key].name}}-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile [colspan]="3" [rowspan]="1" [style.background]="lightblue">-->
+          <!--{{users[key].email}}-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile [colspan]="3" [rowspan]="1" [style.background]="lightblue">-->
+          <!--{{users[key].password}}-->
+        <!--</md-grid-tile>-->
+        <!--<md-grid-tile [colspan]="3" [rowspan]="1" [style.background]="lightblue">-->
+          <!--Accion-->
+        <!--</md-grid-tile>-->
+      <!--</div>-->
+
+    <!--</md-grid-list>-->
+
+
     <table class="table table-stripped">
       <thead>
       <tr>
@@ -17,7 +52,10 @@
         <td>
           <button class="btn btn-info"><i class="fa fa-database"></i></button>
           <button class="btn btn-warning"><i class="fa fa-edit"></i></button>
-          <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
+
+          <button md-raised-button color="warn">
+            <md-icon class="icon">delete</md-icon>
+          </button>
         </td>
       </tr>
       </tbody>

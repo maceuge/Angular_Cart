@@ -7,6 +7,7 @@ import {Router} from '@angular/router';
 @Component({
   selector: 'product-box',
   templateUrl: './prodbox.component.html',
+  styleUrls: ['./prodbox.component.css'],
   animations: [
     trigger('productState', [
       state('inactive', style({

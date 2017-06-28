@@ -5,6 +5,7 @@ import {AuthService} from '../../services/auth.services';
 @Component({
   selector: 'init-page',
   templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css'],
   providers: [AuthService,]
 })
 

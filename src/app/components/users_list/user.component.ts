@@ -5,6 +5,7 @@ import {RegisterService} from '../../services/register.services';
 @Component({
   selector: 'user-list',
   templateUrl: './user.component.html',
+  styleUrls: ['./user.component.css'],
   providers: [AuthService, RegisterService]
 })
 
