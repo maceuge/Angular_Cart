@@ -9,15 +9,15 @@
 .mat-toolbar {
   /*background: #afafaf;*/
   background: #3f51b5;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(255, 255, 255, 0.90);
 }
 
 .regboton {
-  color: rgba(0,0,0,0.87);
+  color: rgba(255, 255, 255, 0.90);
 }
 
 .nav-user {
-  color: rgba(255,255,255,0.89);
+  color: rgba(255,255,255,0.90);
   padding-right: 22px;
   padding-top: 12px;
   font-size: 15px;

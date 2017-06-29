@@ -14,13 +14,15 @@
       </md-card-content>
       <md-card-actions>
         <div class="button-row">
-          <button md-raised-button color="accent" (click)="add(product)">Comprar</button>
+          <button md-fab (click)="add(product)">
+            <md-icon>add_shopping_cart</md-icon>
+          </button>
         </div>
       </md-card-actions>
     </md-card>
   </div>
 
-
+  <!--bootstrap design-->
   <!--<div class="thumbnail" [@productState]="product.state">-->
     <!--<a (click)="goToDetail(product)"><img src="{{product.image}}"></a>-->
     <!--<div class="caption">-->

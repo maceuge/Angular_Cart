@@ -50,10 +50,15 @@
         <td>{{users[key].email}}</td>
         <td>{{users[key].password}}</td>
         <td>
-          <button class="btn btn-info"><i class="fa fa-database"></i></button>
-          <button class="btn btn-warning"><i class="fa fa-edit"></i></button>
-
-          <button md-raised-button color="warn">
+          <!--<button class="btn btn-info"><i class="fa fa-database"></i></button>-->
+          <!--<button class="btn btn-warning"><i class="fa fa-edit"></i></button>-->
+          <button md-mini-fab color="accent">
+            <md-icon class="icon">favorite_border</md-icon>
+          </button>
+          <button md-mini-fab color="primary">
+            <md-icon class="icon">mode_edit</md-icon>
+          </button>
+          <button md-mini-fab color="warn">
             <md-icon class="icon">delete</md-icon>
           </button>
         </td>

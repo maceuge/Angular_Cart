@@ -34,7 +34,7 @@ export class BoxComponent {
 
   add (product: Product) {
     this.product.state = 'active';
-    setTimeout(() => {this.product.state = 'inactive'}, 300);
+    setTimeout(() => {this.product.state = 'inactive'}, 220);
     this.CartService.addToCart(product);
   }
 

@@ -10,7 +10,7 @@ import {AuthService} from '../../services/auth.services';
 })
 
 export class HomeComponent implements OnInit{
-  title: string = "Univer-MAG";
+  title: string = "UNIVERMAG";
   cartItems: any;
 
   constructor (
