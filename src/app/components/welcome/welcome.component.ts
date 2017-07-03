@@ -1,23 +1,44 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../../services/auth.services';
+import {Vehicle, VehicleService} from '../../services/vehicle.service';
 
 @Component ({
   selector: 'welcome',
   templateUrl: './welcome.component.html',
-  providers: [AuthService]
+  styleUrls: ['./welcome.component.css'],
+  providers: [AuthService, VehicleService]
 })
 
 export class WelcomeComponent implements OnInit {
 
-  constructor (private auth: AuthService) {}
+  vehicles: Vehicle[];
 
-  // getUser (){
-  //   let user = JSON.parse(this.auth.getUser());
-  //   return user;
-  // }
+  personaje = {
+    nombre: "Capitan America",
+    edad: 30,
+    raza: "Escudo"
+  }
+
+  isSelected = false;
+
+  constructor (
+    private auth: AuthService,
+    private _vehicleService: VehicleService,
+  ) {}
+
+  getVehicleList () {
+    this._vehicleService.getVehiclesJson()
+      .subscribe(vehicles => this.vehicles = vehicles);
+  }
+
+  select () {
+    this.isSelected = !this.isSelected;
+    console.log(this.isSelected);
+  }
 
   ngOnInit (){
     this.auth.checkSession();
+    this.getVehicleList();
   }
 
 }

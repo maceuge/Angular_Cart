@@ -1,15 +1,37 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3 fix-padding-container">
-      <h2 class="text-center">Bienvenido a UniverMag</h2>
-      <p class="text-center">Una Tienda en donde puedes conseguir todo!</p>
-      <!--<div *ngIf="getUser()">-->
-        <!--<ul>-->
-          <!--<li><p class="text-center">Nombre: {{ getUser().name }}</p></li>-->
-          <!--<li><p class="text-center">Mail: {{ getUser().email }}</p></li>-->
-          <!--<li><p class="text-center">Pass: {{ getUser().password }}</p></li>-->
-        <!--</ul>-->
-      <!--</div>-->
+      <h2 class="text-center" [style.color]="color" [ngClass]="{selected: isSelected}">Hola {{personaje.nombre}}</h2>
+      <p class="text-center" [style.color]="color">Una Tienda en donde puedes conseguir todo!</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <md-input-container class="full-width">
+        <input type="text" mdInput [(ngModel)]="color" placeholder="Color">
+      </md-input-container>
+      <md-input-container class="full-width">
+        <input type="text" mdInput [(ngModel)]="personaje.nombre" placeholder="Personaje">
+      </md-input-container>
+      <div class="center-button">
+        <button md-raised-button color="accent" (click)="select()">SELECTED</button>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="padding-top: 20px;" *ngIf="isSelected">
+    <div class="col-md-4 col-md-offset-4">
+      <ul>
+        <li>{{personaje.nombre}}</li>
+        <li>{{personaje.edad}}</li>
+        <li>{{personaje.raza}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row" style="padding-top: 20px" *ngIf="vehicles">
+    <div class="col-md-4 col-md-offset-4">
+      <ul *ngFor="let vehicle of vehicles">
+        <li>{{vehicle.name | uppercase}}</li>
+      </ul>
     </div>
   </div>
 </div>

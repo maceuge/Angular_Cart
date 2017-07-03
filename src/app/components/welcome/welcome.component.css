@@ -1,0 +1,18 @@
+.selected {
+  border-color: rgba(231,231,231,0.9);
+  border-style: solid;
+  /*border-top: 1px;*/
+  /*border-right: 3px;*/
+  /*border-bottom: 3px;*/
+  /*border-left: 1px;*/
+}
+
+.full-width {
+  width: 100%;
+}
+
+.center-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
