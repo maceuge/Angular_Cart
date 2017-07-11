@@ -20,17 +20,23 @@ export class ProductComponent implements OnInit{
     private auth : AuthService
   ) {}
 
-  getProducts () {
-    this.apiService.getProducts().then(
-      (products) => {
-        this.products = products
-      }
-    )
+  // getProducts () {
+  //   this.apiService.getProducts().then(
+  //     (products) => {
+  //       this.products = products
+  //     }
+  //   )
+  // }
+
+  getProductObservables (){
+    this.apiService.getProductsObserv()
+      .subscribe(product => this.products = product);
   }
 
   ngOnInit () {
     this.auth.checkSession();
-    this.getProducts();
+    // this.getProducts();
+    this.getProductObservables();
   }
 
 

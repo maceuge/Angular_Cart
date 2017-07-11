@@ -14,9 +14,9 @@ export class WelcomeComponent implements OnInit {
   vehicles: Vehicle[];
 
   personaje = {
-    nombre: "Capitan America",
-    edad: 30,
-    raza: "Escudo"
+    nombre: "",
+    edad: 38,
+    raza: "Leon"
   }
 
   isSelected = false;
@@ -31,6 +31,10 @@ export class WelcomeComponent implements OnInit {
       .subscribe(vehicles => this.vehicles = vehicles);
   }
 
+  getDataSubscribe() {
+    return this._vehicleService.getVehiclesJson();
+  }
+
   select () {
     this.isSelected = !this.isSelected;
     console.log(this.isSelected);
@@ -39,6 +43,7 @@ export class WelcomeComponent implements OnInit {
   ngOnInit (){
     this.auth.checkSession();
     this.getVehicleList();
+    // console.log(this.getVehicleList());
   }
 
 }

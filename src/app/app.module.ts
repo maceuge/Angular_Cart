@@ -29,6 +29,7 @@ import {AuthComponent} from './components/login/login.component';
 import {CartBarComponent} from './components/cartbar/cartbar.component';
 import {RegisterComponent} from './components/register/register.component';
 import {UserListComponent} from './components/users_list/user.component';
+import {MovieComponent} from './components/movies/movie.component';
 
 
 const routes = [
@@ -55,6 +56,10 @@ const routes = [
   {
     path: 'userlist',
     component: UserListComponent,
+  },
+  {
+    path: 'movielist',
+    component: MovieComponent,
   }
 ]
 
@@ -70,6 +75,7 @@ const routes = [
     CartBarComponent,
     RegisterComponent,
     UserListComponent,
+    MovieComponent,
   ],
   imports: [
     BrowserModule,

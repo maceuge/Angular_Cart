@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 fix-padding-container">
+    <table class="table table-stripped">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Titulo</th>
+        <th>Rating</th>
+        <th>Fecha Lanzamiento</th>
+        <th>Genero</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let movie of movies">
+        <td>{{movie.id}}</td>
+        <td>{{movie.title}}</td>
+        <td>{{movie.rating}}</td>
+        <td>{{movie.release_date}}</td>
+        <td>{{movie.genre.name}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http} from '@angular/http';
+import {Http, Response} from '@angular/http';
 import {Product} from '../common/product';
 import "rxjs/add/operator/toPromise";
 
@@ -16,6 +16,12 @@ export class ApiService {
        .toPromise()
        .then(response => response.json())
        .catch(this.error);
+  }
+
+  getProductsObserv() {
+    let urlData = '/assets/data/data.json';
+    return this.http.get(urlData)
+      .map((response : Response) => response.json());
   }
 
   getProduct (id: number) {
