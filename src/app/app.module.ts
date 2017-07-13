@@ -31,6 +31,7 @@ import {RegisterComponent} from './components/register/register.component';
 import {UserListComponent} from './components/users_list/user.component';
 import {MovieComponent} from './components/movies/movie.component';
 
+import {SpinnerModule} from './components/spinner/spinner.module';
 
 const routes = [
   {
@@ -76,6 +77,7 @@ const routes = [
     RegisterComponent,
     UserListComponent,
     MovieComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -92,6 +94,7 @@ const routes = [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
+    SpinnerModule,
   ],
   bootstrap: [
     HomeComponent

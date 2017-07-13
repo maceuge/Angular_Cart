@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../../services/auth.services';
 import {Vehicle, VehicleService} from '../../services/vehicle.service';
+import {SpinnerService} from '../../services/spinner.service';
 
 @Component ({
   selector: 'welcome',
@@ -24,6 +25,7 @@ export class WelcomeComponent implements OnInit {
   constructor (
     private auth: AuthService,
     private _vehicleService: VehicleService,
+    private _spinner: SpinnerService,
   ) {}
 
   getVehicleList () {
@@ -43,6 +45,7 @@ export class WelcomeComponent implements OnInit {
   ngOnInit (){
     this.auth.checkSession();
     this.getVehicleList();
+    this._spinner.show();
     // console.log(this.getVehicleList());
   }
 

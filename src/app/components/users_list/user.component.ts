@@ -15,7 +15,7 @@ export class UserListComponent implements OnInit{
 
   constructor (
     private authServ: AuthService,
-    private registerServ: RegisterService
+    private registerServ: RegisterService,
   ) {}
 
 
