@@ -3,6 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {HttpModule} from '@angular/http';
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
+import {ProductListModule} from './components/product_list/product_list.module';
 
 // Material Modules
 import {MdButtonModule} from '@angular/material';
@@ -30,8 +31,12 @@ import {CartBarComponent} from './components/cartbar/cartbar.component';
 import {RegisterComponent} from './components/register/register.component';
 import {UserListComponent} from './components/users_list/user.component';
 import {MovieComponent} from './components/movies/movie.component';
+import {ProductListComponent} from './components/product_list/product_list.component';
 
-import {SpinnerModule} from './components/spinner/spinner.module';
+
+import {SpinnerComponent} from './components/spinner/spinner.component';
+import {SpinnerService} from "./services/spinner.service";
+// import {SpinnerModule} from './components/spinner/spinner.module';
 
 const routes = [
   {
@@ -61,6 +66,10 @@ const routes = [
   {
     path: 'movielist',
     component: MovieComponent,
+  },
+  {
+    path: 'productlist',
+    component: ProductListComponent,
   }
 ]
 
@@ -77,7 +86,8 @@ const routes = [
     RegisterComponent,
     UserListComponent,
     MovieComponent,
-
+    ProductListComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
@@ -94,8 +104,10 @@ const routes = [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    SpinnerModule,
+    // SpinnerModule,
+    // ProductListModule,
   ],
+  providers:[SpinnerService],
   bootstrap: [
     HomeComponent
   ]

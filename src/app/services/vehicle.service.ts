@@ -16,7 +16,7 @@ export class VehicleService {
   constructor (private _http: Http){}
 
   getVehiclesJson () {
-    let vehicle = this._http.get('/assets/apis/vehicle.json');
+    let vehicle = this._http.get('/assets/api/vehicle.json');
     return vehicle.map((response: Response) => <Vehicle[]>response.json().data);
   }
 

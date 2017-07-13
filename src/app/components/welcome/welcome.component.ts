@@ -7,7 +7,7 @@ import {SpinnerService} from '../../services/spinner.service';
   selector: 'welcome',
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.css'],
-  providers: [AuthService, VehicleService]
+  providers: [AuthService, VehicleService, SpinnerService]
 })
 
 export class WelcomeComponent implements OnInit {
