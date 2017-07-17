@@ -13,3 +13,9 @@ input:-webkit-autofill {
 .fix-padding-container {
   padding-top: 30px;
 }
+
+.loader {
+  margin-top: 170px;
+  font-size: 30px;
+  color: #119cff;
+}

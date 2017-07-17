@@ -18,10 +18,8 @@ export class RegisterService {
   }
 
   getUsers () {
-    this._spinnerService.show();
     return this.angFireBase
-      .list('/users', {preserveSnapshot: true})
-      .finally(() => this._spinnerService.hide());
+      .list('/users', {preserveSnapshot: true});
   }
 
   registerUserToDatabase (user: User) {
