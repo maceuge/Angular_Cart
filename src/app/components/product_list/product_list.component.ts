@@ -10,7 +10,7 @@ import {ProductListService} from './product_list.services';
 
 export class ProductListComponent implements OnInit{
 
-  productsList =[];
+  productsList = [];
 
   constructor(private _prodListService: ProductListService){
 
@@ -19,6 +19,11 @@ export class ProductListComponent implements OnInit{
   getProductList () {
     this._prodListService.getProductListJson()
         .subscribe((product) => this.productsList = product);
+  }
+
+  addProductToList (productname) {
+    console.log(productname);
+    this._prodListService.addProduct(productname);
   }
 
   ngOnInit () {

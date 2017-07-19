@@ -1,4 +1,17 @@
 <div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <md-input-container class="full-width">
+      <input type="text" mdInput [(ngModel)]="moviename" placeholder="Movie Title">
+    </md-input-container>
+    <!--<md-input-container class="full-width">-->
+    <!--<input type="text" mdInput [(ngModel)]="personaje.nombre" placeholder="Personaje">-->
+    <!--</md-input-container>-->
+    <div class="center-button">
+      <button md-raised-button color="accent" (click)="filterMovieByTitle(moviename)">Search Movie</button>
+    </div>
+  </div>
+</div>
+<div class="row">
   <div class="col-md-8 col-md-offset-2 fix-padding-container">
     <table class="table table-stripped" *ngIf="movies">
       <thead>
@@ -8,6 +21,7 @@
         <th>Rating</th>
         <th>Fecha Lanzamiento</th>
         <th>Genero</th>
+        <th>Awards</th>
       </tr>
       </thead>
       <tbody>
@@ -16,7 +30,8 @@
         <td>{{movie.title}}</td>
         <td>{{movie.rating}}</td>
         <td>{{movie.release_date}}</td>
-        <td>{{movie.genre.name}}</td>
+        <td>{{movie.genre? movie.genre.name : 'Sin Asignar'}}</td>
+        <td>{{movie.has_awards}}</td>
       </tr>
       </tbody>
     </table>

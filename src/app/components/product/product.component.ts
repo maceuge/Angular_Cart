@@ -28,7 +28,7 @@ export class ProductComponent implements OnInit{
   //   )
   // }
 
-  getProductObservables (){
+  getProduct () {
     this.apiService.getProductsObserv()
       .subscribe(product => this.products = product);
   }
@@ -36,7 +36,7 @@ export class ProductComponent implements OnInit{
   ngOnInit () {
     this.auth.checkSession();
     // this.getProducts();
-    this.getProductObservables();
+    this.getProduct();
   }
 
 
