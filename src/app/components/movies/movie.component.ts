@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MovieService} from '../../services/movie.services';
 
+
 @Component ({
   selector: 'movie-list',
   templateUrl: './movie.component.html',
@@ -14,11 +15,14 @@ export class MovieComponent implements OnInit{
   // movie = [];
   moviename: string;
 
-  constructor(private _movieServ: MovieService) {}
+  constructor(
+      private _movieServ: MovieService,
+  ) {}
 
   getMovies () {
     this._movieServ.getMovieApi()
-      .subscribe(movies => this.movies = movies);
+      .subscribe(
+        (movies) => {this.movies = movies});
   }
 
   filterMovieByTitle (movie) {

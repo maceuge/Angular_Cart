@@ -36,7 +36,8 @@ import {ProductListComponent} from './components/product_list/product_list.compo
 
 import {SpinnerComponent} from './components/spinner/spinner.component';
 import {SpinnerService} from "./services/spinner.service";
-// import {SpinnerModule} from './components/spinner/spinner.module';
+import {MySpinnerComponent} from './components/spinner2/spinner2.component';
+import {LoaderService} from './components/spinner2/spinner2.service';
 
 const routes = [
   {
@@ -88,6 +89,7 @@ const routes = [
     MovieComponent,
     ProductListComponent,
     SpinnerComponent,
+    MySpinnerComponent,
   ],
   imports: [
     BrowserModule,
@@ -107,7 +109,7 @@ const routes = [
     // SpinnerModule,
     // ProductListModule,
   ],
-  providers:[SpinnerService],
+  providers:[SpinnerService, LoaderService],
   bootstrap: [
     HomeComponent
   ]
