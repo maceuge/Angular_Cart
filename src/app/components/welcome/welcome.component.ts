@@ -1,14 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../../services/auth.services';
 import {Vehicle, VehicleService} from '../../services/vehicle.service';
-import {SpinnerService} from '../../services/spinner.service';
-import {LoaderService} from '../spinner2/spinner2.service';
 
 @Component ({
   selector: 'welcome',
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.css'],
-  providers: [AuthService, VehicleService, SpinnerService, LoaderService]
+  providers: [AuthService, VehicleService]
 })
 
 export class WelcomeComponent implements OnInit {
@@ -26,8 +24,6 @@ export class WelcomeComponent implements OnInit {
   constructor (
     private auth: AuthService,
     private _vehicleService: VehicleService,
-    private _spinner: SpinnerService,
-    private _myspin: LoaderService,
   ) {}
 
   getVehicleList () {
@@ -47,9 +43,6 @@ export class WelcomeComponent implements OnInit {
   ngOnInit (){
     this.auth.checkSession();
     this.getVehicleList();
-    this._myspin.display(false);
-    // this._spinner.show();
-    // console.log(this.getVehicleList());
   }
 
 }
