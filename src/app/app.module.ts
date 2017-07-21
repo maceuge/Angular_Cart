@@ -32,7 +32,7 @@ import {RegisterComponent} from './components/register/register.component';
 import {UserListComponent} from './components/users_list/user.component';
 import {MovieComponent} from './components/movies/movie.component';
 import {ProductListComponent} from './components/product_list/product_list.component';
-
+import {DribbleComponent} from './components/adribble/adribble.component';
 
 import {SpinnerComponent} from './components/spinner/spinner.component';
 import {SpinnerService} from "./services/spinner.service";
@@ -71,6 +71,10 @@ const routes = [
   {
     path: 'productlist',
     component: ProductListComponent,
+  },
+  {
+    path: 'dribble',
+    component: DribbleComponent,
   }
 ]
 
@@ -90,6 +94,7 @@ const routes = [
     ProductListComponent,
     SpinnerComponent,
     MySpinnerComponent,
+    DribbleComponent,
   ],
   imports: [
     BrowserModule,

@@ -23,7 +23,7 @@ export class RegisterService {
     this._spinServ.display(true);
     return this.angFireBase
       .list('/users', {preserveSnapshot: true})
-      .finally(() => this._spinServ.display(false));
+      .do(() => this._spinServ.display(false));
   }
 
   registerUserToDatabase (user: User) {

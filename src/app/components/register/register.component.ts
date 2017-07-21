@@ -32,6 +32,9 @@ export class RegisterComponent {
             if (this.user.password !== null) {
               this.registService.registerUserToDatabase(this.user);
               this.error = "";
+              this.user.name = "";
+              this.user.email = "";
+              this.user.password = "";
               this.router.navigate(['/register']);
             } else {
               this.error = "El Campo Contraseña no puede estar Vacio!"

@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+      <spinner-roll></spinner-roll>
+  </div>
+</div>
+<div class="row fix-padding-container" *ngIf="shots">
+  <div class="col-md-10 col-md-offset-1" >
+    <div class="row">
+      <div class="col-md-2"  *ngFor="let shot of shots">
+        <div class="thumbnail">
+          <img [src]="shot.images.normal" alt="...">
+          <div class="caption">
+            <h5>{{shot.title}}</h5>
+            <p>Aerolab Proyects creado: {{shot.created}}</p>
+            <p><a [href]="shot.link" class="btn btn-primary" target="_blank" role="button">Ver Dribble</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<div class="fix-padding-container" *ngIf="shots">-->
+  <!--<div class="row" *ngFor="let shot of shots">-->
+    <!---->
+    <!--<div class="col-md-2 col-md-offset-1" >-->
+      <!---->
+      <!--<div class="row">-->
+        <!--<div class="col-md-2">-->
+          <!--<div class="thumbnail">-->
+            <!--<img [src]="shot.images.normal" alt="...">-->
+            <!--<div class="caption">-->
+              <!--<h5>{{shot.title}}</h5>-->
+              <!--<p>Aerolab Proyects creado: {{shot.created}}</p>-->
+              <!--<p><a [href]="shot.link" class="btn btn-primary" target="_blank" role="button">Ver Dribble</a></p>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!---->
+    <!--</div>-->
+    <!---->
+  <!--</div>-->
+<!--</div>-->
