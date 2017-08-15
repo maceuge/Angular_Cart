@@ -14,7 +14,7 @@
         <input type="text" mdInput [(ngModel)]="personaje.nombre" placeholder="Personaje">
       </md-input-container>
       <div class="center-button">
-        <button md-raised-button color="accent" (click)="select()">SELECTED</button>
+        <button md-raised-button color="accent" (click)="select()">{{ buttonState }}</button>
       </div>
     </div>
   </div>
@@ -24,16 +24,6 @@
         <li>Nombre: {{personaje.nombre}}</li>
         <li>Edad: {{personaje.edad}}</li>
         <li>Raza: {{personaje.raza}}</li>
-      </ul>
-    </div>
-  </div>
-  <div>
-    <spinner-roll></spinner-roll>
-  </div>
-  <div class="row" style="padding-top: 20px" *ngIf="vehicles">
-    <div class="col-md-4 col-md-offset-4">
-      <ul *ngFor="let vehicle of vehicles">
-        <li>{{vehicle.name | uppercase}}</li>
       </ul>
     </div>
   </div>

@@ -1,36 +1,23 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs/Subscription';
-
-import { SpinnerState, SpinnerService } from '../../services/spinner.service';
+import { Component, OnInit } from '@angular/core';
+import { SpinnerService } from './spinner.service';
 
 @Component({
-  moduleId: module.id,
-  selector: 'story-spinner',
+  selector: 'spinner-roll',
   templateUrl: './spinner.component.html',
-  styleUrls: ['./spinner.component.css'],
-  // providers: [SpinnerService],
+  styleUrls: ['./spinner.component.css']
 })
-export class SpinnerComponent implements OnDestroy, OnInit {
-  visible = false;
 
-  private spinnerStateChanged: Subscription;
+export class SpinnerComponent implements OnInit {
 
-  constructor(private spinnerService: SpinnerService) { }
+  showLoader: boolean;
+
+  constructor(
+    private loaderService: SpinnerService) {
+  }
 
   ngOnInit() {
-    // componentHandler.upgradeDom();
-    this.spinnerStateChanged = this.spinnerService.spinnerState
-      .subscribe((state: SpinnerState) => this.visible = state.show);
-  }
-
-  ngOnDestroy() {
-    this.spinnerStateChanged.unsubscribe();
+    this.loaderService.status.subscribe((val: boolean) => {
+      this.showLoader = val;
+    });
   }
 }
-
-
-/*
-Copyright 2016 JohnPapa.net, LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://bit.ly/l1cense
-*/

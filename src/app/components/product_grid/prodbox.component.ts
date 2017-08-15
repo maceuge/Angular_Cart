@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {trigger, state, style, transition, animate} from '@angular/animations';
-import {Product} from '../../common/product';
-import {CartService} from '../../services/cart.services';
+import {Product} from '../../products/product';
+import {CartService} from '../../products/cart.services';
 import {Router} from '@angular/router';
 
 @Component({

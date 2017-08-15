@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
-import {LoaderService} from '../spinner2/spinner2.service';
+import {SpinnerService} from '../spinner/spinner.service';
 
 @Injectable()
 
@@ -8,7 +8,7 @@ export class DribbleService {
 
   constructor(
     private _http: Http,
-    private _spinServ: LoaderService,
+    private _spinServ: SpinnerService,
   ) {}
 
   getDribbleJson () {
