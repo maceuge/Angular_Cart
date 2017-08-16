@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row fix-padding-container">
+    <div class="col s4 offset-s4">
+      <form (ngSubmit)="register(name, email, pass)" #regForm="ngForm">
+        <div class="row">
+          <div class="input-field">
+            <input type="text" class="validate" [(ngModel)]="name" id="name" name="name">
+            <label for="name">Nombre</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field">
+            <input type="text" class="validate" [(ngModel)]="email" id="email" name="email">
+            <label for="email">Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field">
+            <input type="password" class="validate" [(ngModel)]="pass" id="pass" name="password">
+            <label for="pass">Contraseña</label>
+          </div>
+        </div>
+        <div class="row center-align">
+          <button type="submit" class="btn blue darken-3 waves-effect">registrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

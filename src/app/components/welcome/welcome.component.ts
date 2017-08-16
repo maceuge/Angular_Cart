@@ -11,6 +11,7 @@ import {AuthService} from '../login/auth.services';
 export class WelcomeComponent implements OnInit {
 
   buttonState = '';
+  color: string;
 
   personaje = {
     nombre: "",
