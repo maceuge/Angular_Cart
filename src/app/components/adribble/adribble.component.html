@@ -1,44 +1,48 @@
+<div class="container">
 <div class="row">
-  <div class="col-md-4 col-md-offset-4">
-      <spinner-roll></spinner-roll>
+  <div class="col s4 offset-s4">
+    <spinner-roll></spinner-roll>
   </div>
 </div>
-<div class="row fix-padding-container" *ngIf="shots">
-  <div class="col-md-10 col-md-offset-1" >
-    <div class="row">
-      <div class="col-md-2"  *ngFor="let shot of shots">
-        <div class="thumbnail">
-          <img [src]="shot.images.normal" alt="...">
-          <div class="caption">
-            <h5>{{shot.title}}</h5>
-            <p>Aerolab Proyects creado: {{shot.created}}</p>
-            <p><a [href]="shot.link" class="btn btn-primary" target="_blank" role="button">Ver Dribble</a></p>
-          </div>
-        </div>
+<div class="row" *ngIf="shots">
+  <div class="col s4" *ngFor="let shot of shots">
+    <div class="card sticky-action">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" [src]="shot.images.normal">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4 truncate">{{ shot.title }}<i class="material-icons right">more_vert</i></span>
+        <p>Creado: {{ shot.created }}</p>
+        <p><a href="#">Mas Informacion</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">{{ shot.title }}<i class="material-icons right">close</i></span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad doloribus
+          mollitia quibusdam quo temporibus! Magnam, quod, rem. Asperiores dolore,
+          dolorem!</p>
+      </div>
+      <div class="card-action center-align">
+        <a class="btn blue lighten-1 waves-effect waves-light" [href]="shot.link">Ver Dribble</a>
       </div>
     </div>
   </div>
 </div>
+</div>
 
-<!--<div class="fix-padding-container" *ngIf="shots">-->
-  <!--<div class="row" *ngFor="let shot of shots">-->
-    <!---->
-    <!--<div class="col-md-2 col-md-offset-1" >-->
-      <!---->
-      <!--<div class="row">-->
-        <!--<div class="col-md-2">-->
-          <!--<div class="thumbnail">-->
-            <!--<img [src]="shot.images.normal" alt="...">-->
-            <!--<div class="caption">-->
-              <!--<h5>{{shot.title}}</h5>-->
-              <!--<p>Aerolab Proyects creado: {{shot.created}}</p>-->
-              <!--<p><a [href]="shot.link" class="btn btn-primary" target="_blank" role="button">Ver Dribble</a></p>-->
-            <!--</div>-->
+<!--<div class="row fix-padding-container" *ngIf="shots">-->
+  <!--<div class="col-md-10 col-md-offset-1" >-->
+    <!--<div class="row">-->
+      <!--<div class="col-md-2"  *ngFor="let shot of shots">-->
+        <!--<div class="thumbnail">-->
+          <!--<img [src]="shot.images.normal" alt="...">-->
+          <!--<div class="caption">-->
+            <!--<h5>{{shot.title}}</h5>-->
+            <!--<p>Aerolab Proyects creado: {{shot.created}}</p>-->
+            <!--<p><a [href]="shot.link" class="btn btn-primary" target="_blank" role="button">Ver Dribble</a></p>-->
           <!--</div>-->
         <!--</div>-->
       <!--</div>-->
-      <!---->
     <!--</div>-->
-    <!---->
   <!--</div>-->
 <!--</div>-->
+

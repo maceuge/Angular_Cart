@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
-import {Product} from './product';
-import {NavBarComponent} from '../navbar/navbar.component';
+import {Product} from '../product';
+import {NavBarComponent} from '../../navbar/navbar.component';
 
 @Injectable()
 

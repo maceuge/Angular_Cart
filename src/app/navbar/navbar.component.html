@@ -34,8 +34,8 @@
 <!--</md-toolbar>-->
 
 <nav>
-  <div class="nav-wrapper blue-grey darken-1">
-    <a href="#" class="brand-logo">UNIVERMAG</a>
+  <div class="nav-wrapper light-blue darken-1">
+    <a href="#" class="brand-logo logo"><i class="material-icons">shopping_cart</i>UNIVERMAG</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <div *ngIf="sessionStatus()">
         <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a href="#" routerLink="">Welcome</a></li>
@@ -43,11 +43,12 @@
         <li routerLinkActive="active"><a href="#" routerLink="userlist">Usuarios</a></li>
         <li routerLinkActive="active"><a href="#" routerLink="movielist">Movies Api</a></li>
         <li routerLinkActive="active"><a href="#" routerLink="dribble">Dribbble</a></li>
+        <li><a href="#" class="waves-effect waves-red" (click)="logout()">Salir</a></li>
       </div>
       <div *ngIf="!sessionStatus()">
-        <li><a class="btn-flat waves-effect" routerLink="login">INGRESO</a></li>
-        <li><a class="btn red accent-3 waves-effect" routerLink="register">REGISTRO</a></li>
-        <li><a class="btn blue lighten-2 waves-effect waves-light" routerLink="newregister">NewRegister</a></li>
+        <li><a class="btn purple darken-1 waves-effect" routerLink="login">INGRESO</a></li>
+        <!--<li><a class="btn red accent-3 waves-effect" routerLink="register">REGISTRO</a></li>-->
+        <li><a class="btn blue lighten-2 waves-effect waves-light" routerLink="newregister">Registro</a></li>
       </div>
     </ul>
   </div>

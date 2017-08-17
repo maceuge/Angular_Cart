@@ -19,7 +19,7 @@ import { MdCardModule } from '@angular/material';
 
 import { NavBarComponent } from './navbar/navbar.component';
 import { ProductComponent } from './products/product/product.component';
-import { BoxComponent } from './components/product_grid/prodbox.component';
+import { BoxComponent } from './products/product-box/prodbox.component';
 import { CartComponent } from './products/cart/cart.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { DetailComponent } from './products/detail_product/detail.component';

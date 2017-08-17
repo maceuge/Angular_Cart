@@ -2,14 +2,14 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
 import {Location} from '@angular/common';
 import {Product} from '../product';
-import {ApiService} from '../api.services';
-import {CartService} from '../cart.services';
+import {ProductService} from '../product/product.services';
+import {CartService} from '../cart/cart.services';
 import {Router} from '@angular/router';
 
 @Component({
   selector: 'detail',
   templateUrl: './detail.component.html',
-  providers: [ApiService, CartService]
+  providers: [ProductService, CartService]
 })
 
 export class DetailComponent implements OnInit{
@@ -19,7 +19,7 @@ export class DetailComponent implements OnInit{
   constructor (
     private route : ActivatedRoute,
     private locate : Location,
-    private apiservice : ApiService,
+    private apiservice : ProductService,
     private cartService: CartService,
     private router: Router,
   ) {

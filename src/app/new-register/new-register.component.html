@@ -3,6 +3,10 @@
     <div class="col s4 offset-s4">
       <form (ngSubmit)="register(name, email, pass)" #regForm="ngForm">
         <div class="row">
+          <h4 class="orange-text center-align">Registro</h4>
+          <p class="center-align">Registrate y obtene grandes beneficios.</p>
+        </div>
+        <div class="row">
           <div class="input-field">
             <input type="text" class="validate" [(ngModel)]="name" id="name" name="name">
             <label for="name">Nombre</label>
